@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ClassDiagram">
+  <ClassDiagramComponents>
+    <Class name="Persona" package="" visibility="public" xPosition="188.0" yPosition="28.0">
+      <Fields>
+        <Field name="dni" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Interesado" package="" visibility="public" xPosition="19.0" yPosition="167.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Cliente" package="" visibility="public" xPosition="188.0" yPosition="167.0">
+      <Fields>
+        <Field name="fechaAlta" type="Date" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Propietario" package="" visibility="public" xPosition="361.0" yPosition="167.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Propiedad" package="" visibility="public" xPosition="188.0" yPosition="321.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="tipo" type="String" visibility="private"/>
+        <Field name="precio" type="long" visibility="private"/>
+        <Field name="cliente" type="Cliente" visibility="private"/>
+        <Field name="propietario" type="Propietario" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Inmobiliaria" package="" visibility="public" xPosition="507.0" yPosition="321.0">
+      <Fields>
+        <Field name="propiedad" type="Propiedad" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="atenderInteresado" returnType="void" visibility="private">
+          <Argument type="Interesado" name="i"/>
+        </Method>
+        <Method name="atenderPropietario" returnType="void" visibility="private">
+          <Argument type="Propietario" name="p"/>
+        </Method>
+        <Method name="atenderCliente" returnType="void" visibility="private">
+          <Argument type="Cliente" name="c"/>
+        </Method>
+        <Method name="atender" returnType="void" visibility="public">
+          <Argument type="Persona" name="p"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Propietario" target="Persona"/>
+    <IsRelation name="is" source="Cliente" target="Persona"/>
+    <IsRelation name="is" source="Interesado" target="Persona"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
