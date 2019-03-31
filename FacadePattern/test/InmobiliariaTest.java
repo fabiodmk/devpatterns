@@ -4,6 +4,11 @@
  * and open the template in the editor.
  */
 
+import facadepattern.Propiedad;
+import facadepattern.actores.Cliente;
+import facadepattern.actores.Interesado;
+import facadepattern.actores.Propietario;
+import facadepattern.facade.Inmobiliaria;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -35,10 +40,48 @@ public class InmobiliariaTest {
     @After
     public void tearDown() {
     }
-
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    
+    @Test 
+    public void testAtenderInteresado(){
+        Interesado interesado = new Interesado(33724816, "Juancito");
+        Propiedad propiedad = new Propiedad(1000, 
+                                            "Chalet Perrando", 
+                                            "Chalet", 
+                                            2000000, 
+                                            new Propietario(33724815, "Fabio"), 
+                                            null);
+        Inmobiliaria inmobiliaria = new Inmobiliaria(propiedad);
+        inmobiliaria.atender(interesado);
+        assertEquals(inmobiliaria, inmobiliaria);
+    }
+    
+    @Test
+    public void testAtenderPropietario(){
+        Propietario propietario = new Propietario(21333999, "Emiliano");
+        Propiedad propiedad = new Propiedad(1000, 
+                                            "Chalet Perrando", 
+                                            "Chalet", 
+                                            2000000, 
+                                            propietario, 
+                                            null);
+        Inmobiliaria inmobiliaria = new Inmobiliaria(propiedad);
+        inmobiliaria.atender(propietario);
+        assertEquals(inmobiliaria, inmobiliaria);
+    }
+    
+    @Test
+    public void testAtenderCliente(){
+        Cliente cliente = new Cliente(39222999, "Pedro");
+        Propiedad propiedad = new Propiedad(1000, 
+                                            "Chalet Perrando", 
+                                            "Chalet", 
+                                            2000000, 
+                                            new Propietario(33724815, "Fabio"), 
+                                            null);
+        Inmobiliaria inmobiliaria = new Inmobiliaria(propiedad);
+        inmobiliaria.atender(cliente);
+        assertEquals(inmobiliaria.getPropiedad().getCliente(), cliente);
+    }
+    
+    
 }
