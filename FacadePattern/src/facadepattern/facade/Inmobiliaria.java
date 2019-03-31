@@ -18,9 +18,11 @@ import facadepattern.actores.Propietario;
  */
 public class Inmobiliaria {
     
+    private String nombre;
     private Propiedad propiedad;
     
-    public Inmobiliaria(Propiedad propiedad){
+    public Inmobiliaria(String nombre, Propiedad propiedad){
+        this.nombre = nombre;
         this.propiedad = propiedad;
     }
     
@@ -75,6 +77,20 @@ public class Inmobiliaria {
      */
     public void setPropiedad(Propiedad propiedad) {
         this.propiedad = propiedad;
+    }
+
+    /**
+     * @return the nombre
+     */
+    public String getNombre() {
+        return nombre;
+    }
+
+    /**
+     * @param nombre the nombre to set
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
     
     

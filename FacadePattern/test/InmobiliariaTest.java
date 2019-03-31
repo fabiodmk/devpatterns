@@ -50,7 +50,7 @@ public class InmobiliariaTest {
                                             2000000, 
                                             new Propietario(33724815, "Fabio"), 
                                             null);
-        Inmobiliaria inmobiliaria = new Inmobiliaria(propiedad);
+        Inmobiliaria inmobiliaria = new Inmobiliaria("Inmobiliaria UCP",propiedad);
         inmobiliaria.atender(interesado);
         assertEquals(inmobiliaria, inmobiliaria);
     }
@@ -64,7 +64,7 @@ public class InmobiliariaTest {
                                             2000000, 
                                             propietario, 
                                             null);
-        Inmobiliaria inmobiliaria = new Inmobiliaria(propiedad);
+        Inmobiliaria inmobiliaria = new Inmobiliaria("Inmobiliaria UCP",propiedad);
         inmobiliaria.atender(propietario);
         assertEquals(inmobiliaria, inmobiliaria);
     }
@@ -78,7 +78,7 @@ public class InmobiliariaTest {
                                             2000000, 
                                             new Propietario(33724815, "Fabio"), 
                                             null);
-        Inmobiliaria inmobiliaria = new Inmobiliaria(propiedad);
+        Inmobiliaria inmobiliaria = new Inmobiliaria("Inmobiiaria UCP",propiedad);
         inmobiliaria.atender(cliente);
         assertEquals(inmobiliaria.getPropiedad().getCliente(), cliente);
     }

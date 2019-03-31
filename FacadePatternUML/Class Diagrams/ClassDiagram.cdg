@@ -27,7 +27,7 @@
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="Propiedad" package="" visibility="public" xPosition="188.0" yPosition="321.0">
+    <Class name="Propiedad" package="" visibility="public" xPosition="19.0" yPosition="302.0">
       <Fields>
         <Field name="codigo" type="int" visibility="private"/>
         <Field name="nombre" type="String" visibility="private"/>
@@ -39,30 +39,46 @@
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="Inmobiliaria" package="" visibility="public" xPosition="507.0" yPosition="321.0">
+    <Class name="Inmobiliaria" package="" visibility="public" xPosition="211.0" yPosition="302.0">
       <Fields>
         <Field name="propiedad" type="Propiedad" visibility="private"/>
       </Fields>
       <Constructors/>
       <Methods>
-        <Method name="atenderInteresado" returnType="void" visibility="private">
+        <Method name="atenderInteresado" returnType="Interesado" visibility="private">
           <Argument type="Interesado" name="i"/>
         </Method>
-        <Method name="atenderPropietario" returnType="void" visibility="private">
+        <Method name="atenderPropietario" returnType="Propietario" visibility="private">
           <Argument type="Propietario" name="p"/>
         </Method>
-        <Method name="atenderCliente" returnType="void" visibility="private">
+        <Method name="atenderCliente" returnType="Cliente" visibility="private">
           <Argument type="Cliente" name="c"/>
         </Method>
-        <Method name="atender" returnType="void" visibility="public">
+        <Method name="atender" returnType="Persona" visibility="public">
           <Argument type="Persona" name="p"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="InmobiliariaSingleton" package="" visibility="public" xPosition="519.0" yPosition="312.0">
+      <Fields>
+        <Field name="nombreInmobiliaria" type="String" visibility="private"/>
+        <Field name="inmobiliaria" type="Inmobiliaria" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="InmobiliariaSingleton" returnType="void" visibility="private">
+          <Argument type="String" name="nombreInmobiliaria"/>
+        </Method>
+        <Method name="getSingletonInstance" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="nombreInmobiliaria"/>
+          <Argument type="Propiedad" name="propiedad"/>
         </Method>
       </Methods>
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
     <IsRelation name="is" source="Propietario" target="Persona"/>
-    <IsRelation name="is" source="Cliente" target="Persona"/>
     <IsRelation name="is" source="Interesado" target="Persona"/>
+    <IsRelation name="is" source="Cliente" target="Persona"/>
   </ClassDiagramRelations>
 </ClassDiagram>

@@ -9,6 +9,7 @@ import facadepattern.actores.Cliente;
 import facadepattern.actores.Interesado;
 import facadepattern.actores.Propietario;
 import facadepattern.facade.Inmobiliaria;
+import facadepattern.facade.InmobiliariaSingleton;
 
 /**
  *
@@ -36,7 +37,12 @@ public class FacadePattern {
                                             propietario, 
                                             null);
         
-        Inmobiliaria inmobiliaria = new Inmobiliaria(propiedad);
+        //Genero inmobiliaria sin singleton
+        //Inmobiliaria inmobiliaria = new Inmobiliaria("Inmobiliaria UCP",propiedad);
+        //Genero inmobiliaria con singleton
+        Inmobiliaria inmobiliaria = InmobiliariaSingleton.getSingletonInstance("Inmobiliaria UCP", propiedad);
+        //intento generar de nuevo una instancia diferente luego de obtener el singleton
+        inmobiliaria = InmobiliariaSingleton.getSingletonInstance("Inmobiliaria UCP 22", propiedad);
         //Atiendo a un interesado
         System.out.println("*****************************************");
         inmobiliaria.atender(interesado);
