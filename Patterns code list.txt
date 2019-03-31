@@ -1,0 +1,29 @@
+Creacionales
+
+- Singleton
+- Abstract Factory
+- Factory Method
+- Builder
+- Prototype
+
+Estructurales
+- Adapter
+- Bridge
+- Composite
+- Decorator
+- Facade
+- Flyweight
+- Proxy
+
+Comportamiento
+- Chain of responsibility
+- Command
+- Interpreter
+- Iterator
+- Mediator
+- Memento
+- Observer
+- State
+- Strategy
+- Template method
+- Visitor
