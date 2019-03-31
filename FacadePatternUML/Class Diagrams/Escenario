@@ -1,0 +1,15 @@
+
+Descripción del escenario del ejemplo
+
+Una inmobiliaria administra propiedades de propietarios y se las alquila a clientes.
+Existen interesados que consultan. Los propietarios, clientes e interesados son todos personas.
+Cada tipo de persona recibe una atención diferente.
+La inmobiliaria es una sola, no se debe poder tener dos inmobiliarias en actividad al mismo tiempo.
+El propietario es el dueño de la propiedad.
+
+Se requiere poder atender genéricamente a todos los tipos de clientes, siendo única la inmobiliaria en cuanto
+a nombre y propiedades que contiene.
+
+Patrones de desarrollo aplicados:
+1. Facade
+2. Singleton
